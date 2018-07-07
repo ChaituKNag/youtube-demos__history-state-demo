@@ -31,9 +31,9 @@ function tabClicked(e) {
     }, null, "tab-"+contentId);
 }
 
-function checkState() {
+function checkState(e) {
     // page reload
-    if(history.state) {
+    if(e.state) {
         console.log(history.state.tabForId);
         showContent(history.state.tabForId);
     }
