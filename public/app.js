@@ -3,7 +3,8 @@ var contents = document.querySelectorAll(".content>p");
 
 tabs.forEach(tab => tab.addEventListener('click', tabClicked));
 window.onpopstate = checkState;
-history.pushState({
+
+history.replaceState({
     tabForId: tabs[0].dataset.tabFor
 }, null, "tab-"+tabs[0].dataset.tabFor);
 
