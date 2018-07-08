@@ -8,10 +8,6 @@ history.replaceState({
     tabForId: tabs[0].dataset.tabFor
 }, null, "tab-"+tabs[0].dataset.tabFor);
 
-function hideContent() {
-    contents.forEach(content => content.classList.add('hide'));
-}
-
 function showContent(id) {
     contents.forEach(content => {
         if (content.getAttribute('id') === id) content.classList.remove('hide');
